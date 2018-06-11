@@ -9,8 +9,13 @@ const collectionPath = path.join(__dirname, '../collection.json');
 describe('ng-new', () => {
   it('works', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = runner.runSchematic('ng-new', {}, Tree.empty());
+    const options = {
+      name: 'bar'
+    };
+    const tree = runner.runSchematic('ng-new', options, Tree.empty());
+    const files = tree.files;
 
-    expect(tree.files).toEqual([]);
+    expect(files.indexOf('/bar/angular.json')).toBeGreaterThanOrEqual(0);
+    
   });
 });
