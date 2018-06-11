@@ -1,10 +1,6 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "demo-interface": {
-      "description": "A blank schematic.",
-      "factory": "./demo-interface/index#demoInterface"
-    },
     "ng-new": {
       "description": "A blank schematic.",
       "factory": "./ng-new/index#ngNew"
